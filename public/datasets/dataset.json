@@ -1,0 +1,224 @@
+{
+  "version": 1,
+  "name": "Jimmy Eat World",
+  "description": "A tiny demo — rank JEW songs head-to-head",
+  "config": {
+    "kFactor": 32,
+    "avoidWindow": 20,
+    "syncUrl": "https://preference-ranker-api.jimmyeatworldranker.workers.dev"
+  },
+  "group": { "label": "Album", "labelPlural": "Albums" },
+  "item": { "label": "Song", "labelPlural": "Songs" },
+  "groups": [
+    {
+      "name": "Static Prevails",
+      "color": "#2563eb",
+      "image": "images/StaticPrevails.jpg",
+      "items": [
+        { "name": "Thinking, That's All" },
+        { "name": "Rockstar" },
+        { "name": "Claire" },
+        { "name": "Call It In The Air" },
+        { "name": "Seventeen" },
+        { "name": "Episode IV" },
+        { "name": "Digits" },
+        { "name": "Caveman" },
+        { "name": "World is Static" },
+        { "name": "In The Same Room" },
+        { "name": "Robot Factory" },
+        { "name": "Anderson Mesa" },
+        { "name": "77 Satellites" },
+        { "name": "What Would I Say To You Now" }
+      ]
+    },
+    {
+      "name": "Clarity",
+      "color": "#94a3b8",
+      "image": "images/Clarity.png",
+      "items": [
+        { "name": "Table for Glasses" },
+        { "name": "Lucky Denver Mint" },
+        { "name": "Your New Aesthetic" },
+        { "name": "Believe In What You Want" },
+        { "name": "Just Watch The Fireworks" },
+        { "name": "Goodbye Sky Harbor" },
+        { "name": "For Me This Is Heaven" },
+        { "name": "Clarity" },
+        { "name": "A Sunday" },
+        { "name": "Christmas Card" },
+        { "name": "Crush" },
+        { "name": "Blister" },
+        { "name": "12.23.95" },
+        { "name": "Ten" }
+      ]
+    },
+    {
+      "name": "Bleed American",
+      "color": "#dc2626",
+      "image": "images/BleedAmerican.png",
+      "items": [
+        { "name": "Bleed American" },
+        { "name": "A Praise Chorus" },
+        { "name": "The Middle" },
+        { "name": "Your House" },
+        { "name": "Sweetness" },
+        { "name": "Hear You Me" },
+        { "name": "If You Don't, Don't" },
+        { "name": "Get It Faster" },
+        { "name": "Cautioners" },
+        { "name": "My Sundown" },
+        { "name": "The Authority Song" },
+        { "name": "The Most Beautiful Things" },
+        { "name": "No Sensitivity" }
+      ]
+    },
+    {
+      "name": "Futures",
+      "color": "#18181b",
+      "image": "images/Futures.png",
+      "items": [
+        { "name": "Futures" },
+        { "name": "Work" },
+        { "name": "Pain" },
+        { "name": "Drugs or Me" },
+        { "name": "Just Tonight" },
+        { "name": "23" },
+        { "name": "Kill" },
+        { "name": "The World You Love" },
+        { "name": "Polaris" },
+        { "name": "Nothing Wrong" },
+        { "name": "Night Drive" },
+        { "name": "You" },
+        { "name": "When I Want" },
+        { "name": "The Concept" }
+      ]
+    },
+    {
+      "name": "Firestarter/Christmas",
+      "color": "#15803d",
+      "image": "images/Firestarter.jpg",
+      "items": [
+        { "name": "Firestarter" },
+        { "name": "(Splash) Turn Twist" },
+        { "name": "If You Were Born Today" },
+        { "name": "Last Christmas" }
+      ]
+    },
+    {
+      "name": "Stay On My Side Tonight",
+      "color": "#0284c7",
+      "image": "images/StayOnMySide.jpg",
+      "items": [
+        { "name": "Disintegration" },
+        { "name": "Over" },
+        { "name": "Closer" },
+        { "name": "Half Right" }
+      ]
+    },
+    {
+      "name": "Chase This Light",
+      "color": "#eab308",
+      "image": "images/ChaseThisLight.png",
+      "items": [
+        { "name": "Big Casino" },
+        { "name": "Let It Happen" },
+        { "name": "Always Be" },
+        { "name": "Carry You" },
+        { "name": "Electable (Give It Up)" },
+        { "name": "Gotta Be Somebody's Blues" },
+        { "name": "Feeling Lucky" },
+        { "name": "Here It Goes" },
+        { "name": "Chase This Light" },
+        { "name": "Firefight" },
+        { "name": "Dizzy" },
+        { "name": "Be Sensible" },
+        { "name": "Distraction" },
+        { "name": "Take 'Em As They Come" }
+      ]
+    },
+    {
+      "name": "Invented",
+      "color": "#334155",
+      "image": "images/Invented.png",
+      "items": [
+        { "name": "Coffee and Cigarettes" },
+        { "name": "Invented" },
+        { "name": "Stop" },
+        { "name": "Littlething" },
+        { "name": "Higher Devotion" },
+        { "name": "Cut" },
+        { "name": "Action Needs an Audience" },
+        { "name": "Heart Is Hard to Find" },
+        { "name": "My Best Theory" },
+        { "name": "Evidence" },
+        { "name": "Mixtape" },
+        { "name": "Anais" },
+        { "name": "You And I" },
+        { "name": "Precision Auto" }
+      ]
+    },
+    {
+      "name": "Damage",
+      "color": "#0085cc",
+      "image": "images/Damage.jpg",
+      "items": [
+        { "name": "Appreciation" },
+        { "name": "Damage" },
+        { "name": "Lean" },
+        { "name": "Book of Love" },
+        { "name": "I Will Steal You Back" },
+        { "name": "Please Say No" },
+        { "name": "How'd You Have Me" },
+        { "name": "No, Never" },
+        { "name": "Byebyelove" },
+        { "name": "You Were Good" }
+      ]
+    },
+    {
+      "name": "Integrity Blues",
+      "color": "#0f172a",
+      "image": "images/IntegrityBlues.png",
+      "items": [
+        { "name": "You With Me" },
+        { "name": "Sure and Certain" },
+        { "name": "It Matters" },
+        { "name": "Pretty Grids" },
+        { "name": "Pass The Baby" },
+        { "name": "Get Right" },
+        { "name": "You Are Free" },
+        { "name": "The End Is Beautiful" },
+        { "name": "Through" },
+        { "name": "Integrity Blues" },
+        { "name": "Pol Roger" }
+      ]
+    },
+    {
+      "name": "Surviving",
+      "color": "#f97316",
+      "image": "images/Surviving.png",
+      "items": [
+        { "name": "Love Never" },
+        { "name": "All The Way (Stay)" },
+        { "name": "Criminal Energy" },
+        { "name": "555" },
+        { "name": "Congratulations" },
+        { "name": "Recommit" },
+        { "name": "Surviving" },
+        { "name": "One Mil" },
+        { "name": "Delivery" },
+        { "name": "Diamond" }
+      ]
+    },
+    {
+      "name": "Misc Singles",
+      "color": "#f1f5f9",
+      "image": "images/Misc.png",
+      "items": [
+        { "name": "Something Loud" },
+        { "name": "Place Your Debts" },
+        { "name": "Telepath" },
+        { "name": "Failure" }
+      ]    
+    }
+  ]
+}

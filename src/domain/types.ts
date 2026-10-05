@@ -1,0 +1,107 @@
+// Core domain entities for the preference-ranking engine.
+//
+// This module is deliberately free of any dependency on React, IndexedDB/Dexie,
+// or the UI. Everything here is plain data so the ranking engine, persistence
+// layer and UI can each depend on these types without depending on each other.
+
+export type Id = string
+export type IsoDate = string
+
+/** A ranking project, e.g. "Muse" or "Christopher Nolan Films". */
+export interface Collection {
+  id: Id
+  name: string
+  description?: string
+  createdDate: IsoDate
+  updatedDate: IsoDate
+  /** What a group is called in this collection, e.g. "Album" / "Albums". */
+  groupLabel?: string
+  groupLabelPlural?: string
+  /** What an item is called, e.g. "Song" / "Songs". */
+  itemLabel?: string
+  itemLabelPlural?: string
+}
+
+/** An optional logical grouping of items within a collection, e.g. an album. */
+export interface Group {
+  id: Id
+  collectionId: Id
+  name: string
+  description?: string
+  /** Accent colour (hex). Falls back to a hashed hue when absent. */
+  color?: string
+  /** Image URI (resolved absolute at load time). */
+  image?: string
+  metadata?: Record<string, unknown>
+}
+
+/** A single thing being ranked, e.g. a song. */
+export interface Item {
+  id: Id
+  collectionId: Id
+  groupId?: Id
+  name: string
+  description?: string
+  /** Image URI (resolved absolute at load time); falls back to its group's. */
+  image?: string
+  metadata?: Record<string, unknown>
+}
+
+/** The inferred ranking state for one item. */
+export interface Rating {
+  itemId: Id
+  score: number
+  confidence: number
+  wins: number
+  losses: number
+  comparisonCount: number
+  lastUpdated: IsoDate
+}
+
+/** A single recorded "which do you prefer?" decision. */
+export interface Comparison {
+  id: Id
+  collectionId: Id
+  itemAId: Id
+  itemBId: Id
+  winnerId: Id
+  timestamp: IsoDate
+}
+
+export type RankingAlgorithm = 'elo' | 'bradley-terry'
+export type AggregationMethod = 'mean' | 'median' | 'top-n'
+
+/** Relative weights for the pair-selection strategies. Need not sum to 1. */
+export interface PairSelectionWeights {
+  similarRating: number
+  lowConfidence: number
+  random: number
+  verification: number
+}
+
+/** Per-collection configuration. */
+export interface CollectionSettings {
+  collectionId: Id
+  rankingAlgorithm: RankingAlgorithm
+  aggregationMethod: AggregationMethod
+  /** Number of top items to consider when aggregationMethod is 'top-n'. */
+  aggregationTopN: number
+  pairSelectionWeights: PairSelectionWeights
+  eloKFactor: number
+  /** Number of most-recent pairs the selector avoids re-presenting. */
+  avoidWindow: number
+}
+
+export const DEFAULT_SETTINGS: Omit<CollectionSettings, 'collectionId'> = {
+  rankingAlgorithm: 'elo',
+  aggregationMethod: 'mean',
+  aggregationTopN: 3,
+  pairSelectionWeights: {
+    similarRating: 0.4,
+    lowConfidence: 0.3,
+    random: 0.25,
+    verification: 0.05,
+  },
+  eloKFactor: 32,
+  avoidWindow: 40,
+}
